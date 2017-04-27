@@ -48,10 +48,9 @@
     
     self.leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.leftBtn.frame = CGRectMake(10, 5, 90, 30);
-//    [self.leftBtn setTitle:self.leftStr forState:UIControlStateNormal];
+    [self.leftBtn setTitle:self.leftStr forState:UIControlStateNormal];
     
-    
-    [self.leftBtn.titleLabel setFont:[UIFont fontWithName:[UIFont fontNamesForFamilyName:@"PTSans"][0] size:[_pickerToolBarFontSize integerValue]]];
+    [self.leftBtn.titleLabel setFont:[UIFont fontWithName:@"PTSans-Regular" size:[_pickerToolBarFontSize integerValue]]];
     self.leftBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [self.leftBtn addTarget:self action:@selector(cancleAction) forControlEvents:UIControlEventTouchUpInside];
     
@@ -69,8 +68,8 @@
     [self.rightBtn setTitleColor:[self colorWith:rightbtnbgColor] forState:UIControlStateNormal];
     
     [view addSubview:self.rightBtn];
-    [self.rightBtn.titleLabel setFont:[UIFont systemFontOfSize:[_pickerToolBarFontSize integerValue]]];
-    [self.rightBtn addTarget:self action:@selector(cfirmAction) forControlEvents:UIControlEventTouchUpInside];  
+    [self.rightBtn.titleLabel setFont:[UIFont fontWithName:@"PTSans-Regular" size:[_pickerToolBarFontSize integerValue]]];
+    [self.rightBtn addTarget:self action:@selector(cfirmAction) forControlEvents:UIControlEventTouchUpInside];
     
     UILabel *cenLabel=[[UILabel alloc]initWithFrame:CGRectMake(90, 5, SCREEN_WIDTH-180, 30)];
     
@@ -461,7 +460,7 @@
     
     [dic setValue:[self getselectIndexArry] forKey:@"selectedIndex"];
     if (self.backArry.count>0) {
-         self.bolock(dic);
+        self.bolock(dic);
     }
 }
 //判断进来的类型是那种
