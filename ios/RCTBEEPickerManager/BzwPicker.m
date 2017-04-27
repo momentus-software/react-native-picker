@@ -48,8 +48,8 @@
     
     self.leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     self.leftBtn.frame = CGRectMake(10, 5, 90, 30);
-    [self.leftBtn setTitle:self.leftStr forState:UIControlStateNormal];
-    [self.leftBtn setFont:[UIFont systemFontOfSize:[_pickerToolBarFontSize integerValue]]];
+//    [self.leftBtn setTitle:self.leftStr forState:UIControlStateNormal];
+    [self.leftBtn setFont:[UIFont fontWithName:@"PTSans-Regular" size:[_pickerToolBarFontSize integerValue]]];
     self.leftBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
     [self.leftBtn addTarget:self action:@selector(cancleAction) forControlEvents:UIControlEventTouchUpInside];
     
@@ -74,7 +74,7 @@
     
     cenLabel.textAlignment=NSTextAlignmentCenter;
     
-    [cenLabel setFont:[UIFont systemFontOfSize:[_pickerToolBarFontSize integerValue]]];
+    [cenLabel setFont:[UIFont fontWithName:@"PTSans-Bold" size:[_pickerToolBarFontSize integerValue]]];
     
     cenLabel.text=self.centStr;
     
